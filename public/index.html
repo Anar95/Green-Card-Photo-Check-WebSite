@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Card Foto Hazırlayıcı - ABŞ Viza Şəkli 2x2 | Pulsuz Online Tool</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Green Card üçün mükəmməl foto hazırlayın! ABŞ viza şəkli tələblərinə uyğun 2x2 düym foto. Pulsuz, onlayn, dərhal yükləyin. Green card photo maker.">
+    <meta name="keywords" content="green card foto, ABŞ viza şəkli, 2x2 düym foto, green card photo, USA visa photo, passport photo, viza şəkli, amerika viza foto">
+    <meta name="author" content="Green Card Photo Tool">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Azerbaijani, Turkish, English">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Green Card Foto Hazırlayıcı - Pulsuz ABŞ Viza Şəkli">
+    <meta property="og:description" content="ABŞ Green Card üçün tələblərə uyğun foto hazırlayın. Pulsuz, onlayn tool. Dərhal yükləyin!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/green-card-preview.jpg">
+    <meta property="og:url" content="">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Green Card Foto Hazırlayıcı - Pulsuz ABŞ Viza Şəkli">
+    <meta name="twitter:description" content="Green Card üçün mükəmməl foto hazırlayın! 2x2 düym, ağ arxa fon, yüksək keyfiyyət.">
+    
+    <!-- Additional SEO -->
+    <link rel="canonical" href="">
+    <meta name="geo.region" content="AZ">
+    <meta name="geo.placename" content="Azerbaijan">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Green Card Foto Hazırlayıcı",
+      "description": "ABŞ Green Card üçün tələblərə uyğun foto hazırlayan pulsuz onlayn alət",
+      "url": "",
+      "applicationCategory": "PhotoEditingApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Green Card Photo Tool"
+      }
+    }
+    </script>
+    <!-- Add face detection library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/face-api.js/0.22.2/face-api.min.js"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="../src/styles/components.css">
+    <link rel="stylesheet" href="../src/styles/responsive.css">
+    <link rel="stylesheet" href="../src/styles/modern-enhancements.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="language-selector">
+                <select id="languageSelect">
+                    <option value="tr">🇹🇷 Türkçe</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                    <option value="pl">🇵🇱 Polski</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                    <option value="es">🇪🇸 Español</option>
+                </select>
+            </div>
+            <h1 data-lang="title">🇺🇸 Green Card Foto Hazırlayıcı</h1>
+            <p data-lang="subtitle">ABŞ Green Card üçün foto tələblərinə uyğun şəkil hazırlayın</p>
+        </div>
+
+        <div class="main-content">
+            <div class="upload-section">
+                <div class="upload-area interactive-element" id="uploadArea">
+                    <div class="upload-icon">📷</div>
+                    <div class="upload-text" data-lang="uploadText">Şəklinizi buraya yükləyin</div>
+                    <button class="btn interactive-element" data-lang="selectFile">Fayl seçin</button>
+                    <input type="file" id="fileInput" class="file-input" accept="image/*">
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <h3 data-lang="preview">Önizləmə</h3>
+                <div class="preview-container" id="previewContainer">
+                    <p data-lang="noImage">Şəkil yüklənməyib</p>
+                </div>
+                
+                <div class="canvas-container" id="canvasContainer">
+                    <canvas id="canvas"></canvas>
+                </div>
+
+                <div class="controls">
+                    <button class="btn interactive-element" id="checkBtn" data-lang="checkReq" disabled data-tooltip="Fotoğrafın Green Card gereksinimlerini kontrol et">Tələbləri Yoxla</button>
+                    <button class="btn interactive-element" id="fixBtn" data-lang="fixImage" disabled data-tooltip="Fotoğrafı otomatik olarak Green Card standardlarına uygun hale getir">Şəkli Düzəlt</button>
+                    <button class="btn btn-success interactive-element" id="downloadBtn" data-lang="download" disabled data-tooltip="Hazır fotoğrafı indir">Yüklə</button>
+                </div>
+            </div>
+
+            <div class="result-section" id="resultSection">
+                <h3 data-lang="checkResult">Yoxlama Nəticəsi</h3>
+                <div id="resultContent"></div>
+            </div>
+
+            <div class="requirements">
+                <h3 data-lang="requirements">Green Card Foto Tələbləri</h3>
+                <div class="req-grid">
+                    <div class="req-item interactive-element">
+                        <h4 data-lang="sizeReqs">📏 Ölçü Tələbləri</h4>
+                        <ul>
+                            <li data-lang="size1">2x2 düym (51x51mm)</li>
+                            <li data-lang="size2">Baş ölçüsü: 25-35mm</li>
+                            <li data-lang="size3">Göz səviyyəsi düzgün</li>
+                        </ul>
+                    </div>
+                    <div class="req-item interactive-element">
+                        <h4 data-lang="background">🎨 Arxa Fon</h4>
+                        <ul>
+                            <li data-lang="bg1">Ağ rəng</li>
+                            <li data-lang="bg2">Heç bir naxış yox</li>
+                            <li data-lang="bg3">Kölgəsiz</li>
+                        </ul>
+                    </div>
+                    <div class="req-item interactive-element">
+                        <h4 data-lang="personal">👤 Şəxsi Tələblər</h4>
+                        <ul>
+                            <li data-lang="pers1">Üz kameraya baxmalı</li>
+                            <li data-lang="pers2">Təbii ifadə</li>
+                            <li data-lang="pers3">Gözlük qadağan</li>
+                        </ul>
+                    </div>
+                    <div class="req-item interactive-element">
+                        <h4 data-lang="quality">⚡ Keyfiyyət</h4>
+                        <ul>
+                            <li data-lang="qual1">Yüksək həlledicilik</li>
+                            <li data-lang="qual2">Net görüntü</li>
+                            <li data-lang="qual3">Son 6 ay ərzində</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="../src/scripts/translations.js"></script>
+    <script src="../src/scripts/face-detection.js"></script>
+    <script src="../src/scripts/image-processing.js"></script>
+    <script src="../src/scripts/ui-components.js"></script>
+    <script src="../src/scripts/app.js"></script>
+</body>
+</html>
